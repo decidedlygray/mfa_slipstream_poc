@@ -1,0 +1,34 @@
+
+# CHANGES
+
+## 2017.6
+---
+Cleanup of code for blogpost, and release
+
+## 2017.5
+---
+Bug fixes after first field test, forked to integrat with phishing tool for metrics gathering. This PoC
+will no longer be maintained heavily.
+
+## 2017.4
+---
+Fixed SMS authentication to coordinate with phishing page (last 2 digits of phone are now correctly populated)
+Added support for different authentication types and their proper displays
+
+## 2017.3
+---
+Added Stage 0 of process - preopulate target login page on attacker machine
+
+## 2017.2
+---
+Added SSL and CORS support
+
+## 2017.1
+---
+Initial PoC
+
+
+
+Future?
+----------------
+Command-line-ify this thing: server info, target email, target url from command line
