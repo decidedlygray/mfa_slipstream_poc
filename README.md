@@ -34,7 +34,7 @@ Here is an overview of how these pieces fit together:
 
 <img src="attack_diagram.png" alt="attack diagram overview" width="60%" height="60%">
 
-For a more detailed code walkthrough please see this blogpost: TBD
+For a more detailed code walkthrough please see this blogpost: [MFA Slipstream PoC Walkthrough](http://decidedlygray.com/2017/08/24/mfa-slipstream-phishing-mfa-poc-walkthrough/)
 
 
 # Attacker Component Setup - mfa_slipstream.py
