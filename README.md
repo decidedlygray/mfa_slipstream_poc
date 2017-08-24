@@ -13,23 +13,26 @@ required JavaScript. The files have notes on where to drop in the code on the cl
 # Overview
 
 There are 3 components to this PoC:
-	* mfa_slipstream.py - This tool sits running on the attacker's machine. It handles collecting
+
+- mfa_slipstream.py - This tool sits running on the attacker's machine. It handles collecting
 		username and password data, it facilitates the transition from the username and password to
 		the collection of MFA tokens, as well as handles collecting the MFA tokens themselves.
-	* collect_userpass.js - This only contains 1 JavaScript function that sends a request back to
+- collect_userpass.js - This only contains 1 JavaScript function that sends a request back to
 		your attacker box to do the initial login in real-time.
-	* collect_mfa.js - This contains 2 pieces of JavaScript. Part 1 handles sending the MFA code
+- collect_mfa.js - This contains 2 pieces of JavaScript. Part 1 handles sending the MFA code
 		back to your attacker machine, part 2 parses information from the url set by
 		collect_userpass.js (part 2 appears in the cloned page second, though it is actually executed
 		first during the attack).
 
 For a demo of the attack please see this blogpost: [Phishing Your Way Past Multi-Factor Authentication](http://www.openskycorp.com/resource-center/blog/phishing-way-past-multi-factor-authentication/)
 
-Or view the video directly here:
+Or just the video here:
+
 [![MFA Slipstream Demo Video](https://img.youtube.com/vi/zjZnsyRb4Rw/0.jpg)](https://www.youtube.com/watch?v=zjZnsyRb4Rw)
 
 Here is an overview of how these pieces fit together:
-![attack diagram overview](attack_diagram.png){:height="50%" width="50%"}
+
+<img src="attack_diagram.png" alt="attack diagram overview" width="60%" height="60%">
 
 For a more detailed code walkthrough please see this blogpost: TBD
 
@@ -76,10 +79,11 @@ You should review and understand both files, update them to suite your target. W
 see 'widgetscorp.co' replace it with your target's domain.
 
 You will see 2 URL patters in these files of things you need to update:
-	* https://login.mymicrosoftphish.com/4bf18ef2-86a7-4b76-b63f-80a89cde4657/login?bunch_of_stuff_here
+
+- https://login.mymicrosoftphish.com/4bf18ef2-86a7-4b76-b63f-80a89cde4657/login?bunch_of_stuff_here
 	This needs to point to wherever you have your Phishing Stage 2 page is hosted. Stage 1
 	performs the transition, using information supplied by an XHR call to mfa_slipstream.py to land
 	the user on a believable MFA collection page.
-	* https://login.mymicrosoftphish.com/error?bunch_of_stuff_here
+- https://login.mymicrosoftphish.com/error?bunch_of_stuff_here
 	This is an error page you need to create, or however you want to handle the "dump off" after the
 	user fails to get a session. This is called by code in collect_mfa.js.
