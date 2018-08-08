@@ -24,7 +24,9 @@ There are 3 components to this PoC:
 		collect_userpass.js (part 2 appears in the cloned page second, though it is actually executed
 		first during the attack).
 
-For a demo of the attack please see this blogpost: [Phishing Your Way Past Multi-Factor Authentication](http://www.openskycorp.com/resource-center/blog/phishing-way-past-multi-factor-authentication/)
+For an overview of how the PoC code is organized see: [MFA Slipstream - Phishing MFA PoC Walkthrough](https://decidedlygray.com/2017/08/24/mfa-slipstream-phishing-mfa-poc-walkthrough/)
+
+For a demo of the attack please see this blogpost: [Phishing Your Way Past Multi-Factor Authentication](https://www.tuvopensky.com/resources/blog/phishing-your-way-past-multi-factor-authentication/)
 
 Or just the video here:
 
@@ -33,8 +35,6 @@ Or just the video here:
 Here is an overview of how these pieces fit together:
 
 <img src="attack_diagram.png" alt="attack diagram overview" width="60%" height="60%">
-
-For a more detailed code walkthrough please see this blogpost: [MFA Slipstream PoC Walkthrough](http://decidedlygray.com/2017/08/24/mfa-slipstream-phishing-mfa-poc-walkthrough/)
 
 
 # Attacker Component Setup - mfa_slipstream.py
